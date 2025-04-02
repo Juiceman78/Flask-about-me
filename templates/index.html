@@ -8,10 +8,24 @@
 </head>
 <body>
     <h1>Flask about Vincent </h1>
-        <h2>Vincent's hobbies </h2>
-            <p>I am a student at staten island technical highschool, I am on the volleyball team and enjoy snowboarding. I indulge in saratoga spring water and wash it off with a banana peel. I enjoy watching the drama of tim cheese and john pork. </p>\
-            <a href="https://www.youtube.com" target="_blank"> YouTube</a>
- 
+    <h2>Vincent's hobbies</h2>
+    <section class="home">
+        <div class="img">
+            <img src="static/John.jpg" alt="">
+        </div>
+    </section>
+    <p>I am a student at Staten Island Technical High School. I am on the volleyball team and enjoy snowboarding. I indulge in Saratoga spring water and wash it off with a banana peel. I enjoy watching the drama of Tim Cheese and John Pork.</p>
+    <a href="https://www.youtube.com" target="_blank">YouTube</a>
 
+    <div class="things">
+        {% for thing in things %}
+            <div class="thing">
+                <h2>{{ thing.title }}</h2>
+                <p>{{ thing.description }}</p>
+            </div>
+        {% endfor %}
+    </div>
+
+  
 </body>
 </html>
